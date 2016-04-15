@@ -1,0 +1,343 @@
+//------------------------------------------------//
+//--------------------- COLORS -------------------//
+//------------------------------------------------//
+
+@green: #96ceb4;
+@greenHover: #88d8b0;
+@tan: #ffeead;
+@tanHover: #ffcc5c;
+@red: #ff6f69;
+@blue: #428bca;
+
+//------------------------------------------------//
+//--------------------- FONTS --------------------//
+//------------------------------------------------//
+
+.primary-font {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.secondary-font {
+	font-family: 'Oswald', sans-serif;
+    //font-family: 'Ruda', sans-serif;
+}
+.logo-font {
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+//------------------------------------------------//
+//------------------- VARIABLES ------------------//
+//------------------------------------------------//
+
+@containerWidth: 1200px;
+
+//------------------------------------------------//
+//------------------- BASE CSS -------------------//
+//------------------------------------------------//
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	
+}
+.container-fluid {
+	max-width: @containerWidth;
+	margin: 0 auto;
+	position: relative;
+}
+.no-pad {
+	padding: 0 !important;
+}
+p {
+	.primary-font;
+	font-weight: bold;
+	font-size: 18px;
+}
+a {
+	.primary-font;
+	font-size: 18px;
+	&:focus {
+		outline: none !important;
+		text-decoration: none !important;
+	}
+}
+ul, ol {
+	li {
+		.primary-font;
+		font-size: 18px;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	.secondary-font !important;
+}
+
+//------------------------------------------------//
+//----------------- PLACEHOLDER ------------------//
+//------------------------------------------------//
+
+::-webkit-input-placeholder {
+	
+}
+
+:-moz-placeholder {
+	
+}
+
+::-moz-placeholder {
+	
+}
+
+:-ms-input-placeholder {
+	
+}
+
+//------------------------------------------------//
+//---------------- GRAVITY FORMS -----------------//
+//------------------------------------------------//
+// http://www.kriesi.at/support/topic/gravity-forms-styling-adjustments/
+
+form {
+	ul {
+		display: block !important;
+	}
+}
+select {
+	height: 40.25px;
+}
+input[type="submit"] {
+    border: none;
+    background-color: @green;
+    padding: 10px 30px;
+    color: white;
+    text-transform: uppercase;
+    .primary-font;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    &:hover {
+        background-color: @greenHover;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (max-width: 989px) {
+.gform_wrapper .top_label li.gfield.gf_left_third, .gform_wrapper .top_label li.gfield.gf_middle_third {
+width: 49% !important;
+margin-top: 10px !important;
+}
+
+.gform_wrapper .top_label li.gfield.gf_right_third {
+width: 99% !important;
+margin-top: 10px !important;
+}
+
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_radio li{
+width: 33% !important;
+margin-top: 0px !important;
+}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.gform_wrapper li.gfield.gf_list_3col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_3col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_3col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_radio li{
+width: 49% !important;
+margin-top: 0px !important;
+}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+.gform_wrapper .top_label li.gfield.gf_left_half,
+.gform_wrapper .top_label li.gfield.gf_right_half,
+.gform_wrapper .top_label li.gfield.gf_left_third,
+.gform_wrapper .top_label li.gfield.gf_middle_third {
+width: 99% !important;
+margin-top: 10px !important;
+}
+
+.gform_wrapper li.gfield.gf_list_3col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_3col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_3col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_list_2col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_2col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_2col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_2col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_radio li{
+width: 99% !important;
+margin-top: 0px !important;
+}
+}
+
+/* general style */
+.gform_wrapper input, .gform_wrapper select{
+margin-bottom: 0 !important;
+min-width: auto !important;
+}
+
+.gform_wrapper ul li.gfield {
+margin-bottom: 15px !important;
+}
+
+.gform_wrapper li.gf_list_inline ul.gfield_checkbox li, .gform_wrapper li.gf_list_inline ul.gfield_radio li{
+margin-right: 20px !important;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+margin: 1px 0 0 19px !important;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label{
+font-weight: normal;
+}
+
+#top .gform_page_footer .button{
+margin-bottom: 20px !important;
+display: inline !important;
+}
+
+#top .gform_page_footer .button.gform_button, #top .gform_page_footer .button.gform_next_button{
+float: right !important;
+}
+
+//------------------------------------------------//
+//----------------- WEATHER APP ------------------//
+//------------------------------------------------//
+
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#weather {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	padding: 10px 20px 2px 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+	i {
+		color: white;
+		font-family: weather;
+		font-size: 70px;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 1.0;
+		text-transform: none;
+	}
+	h2 {
+		margin: 0 0 8px;
+		color: #fff;
+		font-size: 40px;
+		font-weight: 300;
+		text-align: center;
+		text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+		margin-bottom: 0;
+	}
+	
+}
+
+.icon-0:after { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+//------------------------------------------------//
+//----------------- BACK TO TOP ------------------//
+//------------------------------------------------//
+
+#back-to-top {
+	width: 50px;
+	height: 45px;
+	z-index: 1;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 0 5px 5px 0;
+	border-radius: 0;
+	color: #fff;
+	background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+	&:hover, &:focus, &:active {
+	    color: #fff;
+	    background-color: rgba(0,0,0,0.7);
+	}
+	i {
+		font-size: 30px;
+		margin: 5px 0 0 10px;
+	}
+}
+#back-to-top.show {
+    opacity: 1;
+}
+
+
+@import "styles-xs.less";
+@import "styles-sm.less";
+@import "styles-md.less";
+@import "styles-lg.less";

@@ -31,17 +31,17 @@ jQuery(document).ready(function( $ ) {
     });
 
     // Scrolls to the selected menu item on the page
-    $("#sidebar-wrapper a[href^='#']").on('click', function(e) {
+    // $("#sidebar-wrapper a[href^='#']").on('click', function(e) {
     
-        e.preventDefault();
-        var hash = this.hash;
+    //     e.preventDefault();
+    //     var hash = this.hash;
     
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-            }, 300, function() {
-                window.location.hash = hash;
-        });
-    });
+    //     $('html, body').animate({
+    //         scrollTop: $(hash).offset().top
+    //         }, 300, function() {
+    //             window.location.hash = hash;
+    //     });
+    // });
     
     // File tree setup
     $(function() {

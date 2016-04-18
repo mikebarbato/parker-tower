@@ -158,13 +158,13 @@ function remove_ul ( $menu ){
 add_filter( 'wp_nav_menu', 'remove_ul' );
 
 // ADD CUSTOM ATTRIBUTES TO <A></A> WP_NAV_MENU
-function add_specific_menu_location_atts( $atts, $item, $args ) {
-    if( $args->theme_location == 'primary_navigation' ) {
-      $atts['onClick'] = 'jQuery("#menu-close").click();';
-    }
-    return $atts;
-}
-add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+// function add_specific_menu_location_atts( $atts, $item, $args ) {
+//     if( $args->theme_location == 'primary_navigation' ) {
+//       $atts['onClick'] = "$('#menu-close').click();";
+//     }
+//     return $atts;
+// }
+// add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
 
 // ALLOW WIDGETS TO USE PHP
 add_filter('widget_text', 'execute_php', 100);

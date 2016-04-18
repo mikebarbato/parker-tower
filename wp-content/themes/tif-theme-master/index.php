@@ -18,6 +18,22 @@
 	
 </div>
 
+<?php if (!is_user_logged_in()) { ?>
+
+<div class="full-width" id="about">
+	<div class="container-fluid">
+		<div class="inner col-xs-24 col-sm-offset-1 col-sm-22 col-md-offset-3 col-md-18 col-lg-offset-4 col-lg-offset-4 col-lg-16">
+			
+			<?php the_field('about_content'); ?>
+			
+		</div>
+	</div>
+</div>
+
+<?php } ?>
+
+<?php if (is_user_logged_in()) { ?>
+
 <div class="full-width" id="news-events">
 	<div class="container-fluid no-pad">
 		<div class="inner no-pad col-xs-24">
@@ -291,6 +307,8 @@
 	</div>
 </div>
 
+<?php } ?>
+
 <div class="full-width" id="contact-us">
 	<div class="container-fluid">
 		<div class="inner col-xs-24">
@@ -316,7 +334,8 @@
 		        
 		        <h1>Contact Us</h1>
 		        
-		        <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true]'); ?>
+				<?php $short = get_field( "contact_form_shortcode" ); 
+				echo do_shortcode($short); ?>
     			
     		</div>
 			
@@ -325,3 +344,10 @@
 </div>
 
 <?php get_footer(); ?>
+
+
+
+
+
+
+

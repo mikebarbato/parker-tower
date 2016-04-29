@@ -64,9 +64,9 @@ jQuery(document).ready(function( $ ) {
         woeid: '',
         unit: 'f',
         success: function(weather) {
-            html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+            var forcast = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
     
-            $("#weather").html(html);
+            $("#weather").html(forcast);
         },
         error: function(error) {
             $("#weather").html('<p>'+error+'</p>');

@@ -521,7 +521,7 @@ input[type="submit"]:hover {
   background-size: cover;
 }
 #imageBanner .inner {
-  height: 70vh;
+  height: 35vh;
 }
 #imageBanner .inner .content {
   position: absolute;
@@ -572,6 +572,20 @@ input[type="submit"]:hover {
 }
 .grid .grid-item {
   width: 100%;
+}
+#singlePage .inner {
+  padding: 80px 0;
+}
+#singlePage .inner .info {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+#singlePage .inner .info li {
+  color: #93d2ca;
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 #home .slick-slider .image-cell {
   position: relative;
@@ -923,13 +937,6 @@ input[type="submit"]:hover {
 #contact-us .inner .form-holder form textarea {
   width: 100%;
   padding: 5px 5px 5px 10px;
-}
-#fileIntro {
-  background-color: #ffeead;
-}
-#fileIntro .inner {
-  padding: 60px 0;
-  text-align: center;
 }
 #fileTree .inner {
   padding: 60px 0;

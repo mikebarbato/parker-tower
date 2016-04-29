@@ -4,13 +4,13 @@
 
 <div class="full-width" id="singlePage">
 	<div class="container-fluid">
-		<div class="inner col-xs-24">
+		<div class="inner col-xs-24 col-sm-offset-2 col-sm-20 col-md-offset-3 col-md-18 col-lg-offset-4 col-lg-16">
 			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
-			<?php the_title(); ?>
+			<h1><?php the_title(); ?></h1>
 			
-			<ul>
+			<ul class="info">
 				<li class="date"><?php the_date('m-d-Y'); ?><span> / </span></li>
 				<li class="author"><?php the_author(); ?></li>
 			</ul>
